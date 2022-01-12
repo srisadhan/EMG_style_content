@@ -1,0 +1,25 @@
+# Ninapro DB2 - second data subset (DB2) parameters
+window_size         : 0.3      # 300 ms 
+window_overlap      : 0.5      # 50 % overlap
+fs                  : 2000     # 2000 Hz
+n_channels          : 12       # 12 electrodes
+num_subjects        : 40
+test_subjects       : 2
+
+# Style encoder parameters
+batch_param:
+    n     : 16 # pick 16 subjects at a time  
+    m     : 8  # pick 8 samples from each subject at a time
+    
+input_size          : 12
+embedding_size      : 256
+hidden_size         : 256
+projection_size     : 64
+num_layers          : 3
+sliding_win_overlap : 0.5
+train_epochs        : 1001 # number of training epochs
+
+# trained model path 
+model_save_dir      : 'models/'
+runs_dir            : 'runs/'
+vis_dir             : 'vis/'
